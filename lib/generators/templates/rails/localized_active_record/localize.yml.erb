@@ -4,8 +4,8 @@
       <%= singular_table_name %>:
         one: <%= human_name %>
         other: <%= human_name.pluralize %>
-  attributes:
-    <%= singular_table_name %>:
+    attributes:
+      <%= singular_table_name %>:
 <% for attribute in attributes -%>
-      <%= attribute.name %>: <%= attribute.human_name %>
+        <%= attribute.name %>: <%= attribute.human_name %>
 <% end -%>
