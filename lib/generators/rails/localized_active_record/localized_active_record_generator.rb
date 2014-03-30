@@ -9,7 +9,7 @@ module Rails
       class_option :locale, required: true, type: :array
 
       def call_original_model
-        invoke('active_record:model', [name, 'list_order:string', 'name:string'], {migration: true, timestamps: true})
+        invoke('active_record:model', ARGV, {migration: true, timestamps: true})
       end
 
       def create_localization_file
